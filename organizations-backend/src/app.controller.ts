@@ -7,7 +7,6 @@ export class AppController {
 
   @Get()
   getHello(): string {
-    return 'Nothing is here'
+    return 'Nothing is here';
   }
-
 }

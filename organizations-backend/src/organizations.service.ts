@@ -10,16 +10,20 @@ export class OrganizationsService {
   constructor() {
     const fileName = resolve(__dirname, 'assets', 'orgs_sample.csv');
     createReadStream(fileName)
-      .pipe(csv({ separator: ';'}))
+      .pipe(csv({ separator: ';' }))
       .on('data', (data) => this.organizations.push(data))
       .on('end', () => {
         console.log(`Loaded organizations list, ${this.organizations.length}`);
       });
   }
 
-  getOrganizations(searchName: string, offset: number, limit: number): OrganizationsPaginatedResponse {
+  getOrganizations(
+    searchName: string,
+    offset: number,
+    limit: number,
+  ): OrganizationsPaginatedResponse {
     const regExp = new RegExp(searchName, 'i');
-    
+
     const filtered = this.organizations.filter((org) => {
       return org.name.search(regExp) > -1;
     });
@@ -27,6 +31,6 @@ export class OrganizationsService {
     return {
       result: filtered.slice(offset, offset + limit),
       total: filtered.length,
-    }
+    };
   }
 }
