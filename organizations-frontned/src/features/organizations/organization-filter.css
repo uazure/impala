@@ -1,0 +1,49 @@
+.OrganizationFilter-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.OrganizationFilter-title {
+  color: #21355c;
+  font-size: 22px;
+}
+
+.OrganizationFilter-clear-button {
+  color: #8e8e8e;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  flex: 0 1 auto;
+}
+
+.OrganizationFilter-searchbox {
+  padding: 14px;
+  border: 1px solid #8e8e8e;
+  border-radius: 4px;
+}
+
+.OrganizationFilter-filter-title {
+  color: #b48b1b;
+  font-size: 20px;
+  margin: 0 0 20px;
+}
+
+.OrganizationFilter-input {
+  background-color: white;
+  padding: 8px 16px 8px 32px;
+  border: 1px solid #c2c2c2;
+  border-radius: 4px;
+}
+
+.OrganizationFilter-adornment {
+  position: absolute;
+  transform: scaleX(-1);
+  left: 10px;
+  top: 4px;
+  color: #8e8e8e;
+}
+
+.OrganizationFilter-input-container {
+  position: relative;
+}
